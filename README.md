@@ -14,6 +14,8 @@ test.csv - the test set
 
 mocksubmission.csv - a sample submission file in the correct format
 
+Download data set from here - https://www.kaggle.com/competitions/pubg-version-3/overview
+
 Data fields:
 
     DBNOs - Number of enemy players knocked.
