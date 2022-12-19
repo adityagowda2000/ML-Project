@@ -3,11 +3,15 @@
 In a PUBG game, up to 100 players start in each match (matchId). Players can be on teams (groupId) which get ranked at the end of the game (winPlacePerc) based on how many other teams are still alive when they are eliminated. In game, players can pick up different munitions, revive downed-but-not-out (knocked) teammates, drive vehicles, swim, run, shoot, and experience all of the consequences -- such as falling too far or running themselves over and eliminating themselves.
 
 You are provided with a large number of anonymized PUBG game stats, formatted so that each row contains one player's post-game stats. The data comes from matches of all types: solos, duos, squads, and custom; there is no guarantee of there being 100 players per match, nor at most 4 player per group.
-Dataset Description
+
+## Dataset Description
 
 File descriptions
+
 train.csv - the training set
+
 test.csv - the test set
+
 mocksubmission.csv - a sample submission file in the correct format
 
 Data fields:
@@ -42,5 +46,6 @@ Data fields:
     maxPlace - Worst placement we have data for in the match. This may not match with numGroups, as sometimes the data skips over placements.
     winPlacePerc - The target of prediction. This is a percentile winning placement, where 1 corresponds to 1st place, and 0 corresponds to last place in the match. It is calculated off of maxPlace, not numGroups, so it is possible to have missing chunks in a match.
 
-You must create a model which predicts players' finishing placement based on their final stats, on a scale from 1 (first place) to 0 (last place).
+
+## You must create a model which predicts players' finishing placement based on their final stats, on a scale from 1 (first place) to 0 (last place).
 
